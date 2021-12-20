@@ -3,9 +3,21 @@
   padding: 16px 31px;
   display: flex;
   width: 100%;
-  min-height: 100vh;
+  max-height: calc(100vh - 100px);
 }
 
 .feed {
   flex: 4.337;
+  overflow-y: hidden;
+}
+
+.filter {
+  margin-bottom: 24px;
+  color: #2264D1;
+  line-height: 24px;
+  letter-spacing: 0.44px;
+}
+
+.sort {
+  margin-right: 350px;
 }

@@ -4,6 +4,7 @@ import history from './history';
 import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
 import SearchPage from './pages/SearchPage/SearchPage';
+import ImageDetail from './pages/ImageDetail/ImageDetail';
 import './App.css';
 
 function App() {
@@ -11,11 +12,14 @@ function App() {
     <Router history={history}>
       <Header />
       <Switch>
-        <Route exact path="/">
+        <Route path="/" exact>
           <Home />
         </Route>
-        <Route exact path="/search">
+        <Route path="/search" exact>
           <SearchPage />
+        </Route>
+        <Route path="/images">
+          <ImageDetail />
         </Route>
       </Switch>
     </Router>

@@ -3,14 +3,14 @@ import SideBar from '../../components/SideBar/SideBar';
 import ImageList from '../../components/ImageList/ImageList';
 import './searchPage.css';
 
-function SearchPage() {
+function SearchPage(props) {
   return (
     <div className="searchPageContainer">
       <SideBar />
       <div className="feed">
         <div className="filter">
-          <span>Sort</span>
-          <span>Related tags</span>
+          <span className="sort">Sort:</span>
+          <span className="related">Related tags:</span>
         </div>
         <ImageList />
       </div>

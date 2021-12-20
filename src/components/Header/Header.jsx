@@ -1,12 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Search, NotificationsNone, Add, Close } from '@mui/icons-material';
+import history from '../../history';
 import './header.css';
 
-function Header() {
+function Header(props) {
+  const [value, setValue] = useState('');
+  const handleEnter = (e) => {
+    if (e.keyCode === 13) {
+      if (value.trim() !== '') {
+        history.push(`/search?query=${value}`);
+      }
+    }
+  };
+
+  const handleChange = (e) => {
+    setValue(e.target.value);
+  };
+
   return (
     <div className="headerContainer">
       <div className="headerLeft">
-        <span className="logo">We Images</span>
+        <Link className="logo" to="/">
+          <span>We Images</span>
+        </Link>
       </div>
       <div className="headerCenter">
         <div className="searchBar">
@@ -16,6 +33,9 @@ function Header() {
               className="searchInput"
               type="text"
               placeholder="Search..."
+              value={value}
+              onKeyDown={handleEnter}
+              onChange={handleChange}
             />
           </div>
           <Close className="closeIcon" />
