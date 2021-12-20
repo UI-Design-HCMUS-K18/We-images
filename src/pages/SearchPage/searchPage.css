@@ -1,0 +1,11 @@
+.searchPageContainer {
+  margin-top: 80px;
+  padding: 16px 31px;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.feed {
+  flex: 4.337;
+}
