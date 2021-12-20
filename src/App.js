@@ -4,6 +4,7 @@ import history from './history';
 import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
 import SearchPage from './pages/SearchPage/SearchPage';
+import './App.css';
 
 function App() {
   return (
