@@ -1,3 +1,69 @@
-.imageDetail {
-  margin-top: 80px;
+.modal {
+  width: 100%;
+  position: relative;
+}
+
+.modal .container {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+}
+
+.box {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 85%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+
+.modal .close-icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 10px;
+  top: 10px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .prev-image-icon {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .next-image-icon {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
 }

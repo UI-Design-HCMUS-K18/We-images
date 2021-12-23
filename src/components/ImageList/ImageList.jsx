@@ -7,8 +7,8 @@ import './imagelist.css';
 function ImageList(props) {
   const search = useLocation().search;
   const query = new URLSearchParams(search).get('query');
-  console.log(query);
   const [images, setImages] = useState([]);
+  console.log(images);
   useEffect(() => {
     (async () => {
       const response = await unsplash.get('/search/photos', {
