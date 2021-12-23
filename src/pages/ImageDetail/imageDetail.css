@@ -1,12 +1,16 @@
-.modal {
+.image-modal {
   width: 100%;
   position: relative;
 }
 
-.modal .container {
+.image-modal__container {
   width: 100%;
   position: relative;
   height: 100vh;
+}
+
+.image-modal__container .full-image {
+  height: 200px;
 }
 
 .box {
@@ -24,7 +28,7 @@
   overflow-y: scroll;
 }
 
-.modal .close-icon {
+.image-modal .close-icon {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -38,7 +42,7 @@
   align-items: center;
 }
 
-.modal .prev-image-icon {
+.image-modal .prev-image-icon {
   position: absolute;
   width: 80px;
   height: 80px;
@@ -53,7 +57,7 @@
   align-items: center;
 }
 
-.modal .next-image-icon {
+.image-modal .next-image-icon {
   position: absolute;
   width: 80px;
   height: 80px;
