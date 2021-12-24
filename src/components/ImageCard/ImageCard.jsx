@@ -5,7 +5,7 @@ import './imageCard.css';
 
 function ImageCard(props) {
   const [span, setSpan] = useState(0);
-  console.log(props.image);
+
   const imageRef = useRef(null);
   const { query } = props;
   const { urls, description, id } = props.image;

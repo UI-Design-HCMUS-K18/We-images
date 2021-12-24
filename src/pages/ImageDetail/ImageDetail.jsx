@@ -61,8 +61,6 @@ export default function ImageDetail() {
     setAnchorEl(null);
   };
 
-  console.log(image);
-
   const fectchImage = async (imageID) => {
     const response = await unsplash.get(`/photos/${imageID}`);
     setImage(response.data);

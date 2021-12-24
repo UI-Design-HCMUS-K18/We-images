@@ -19,7 +19,6 @@ function App() {
           <SearchPage />
         </Route>
         <Route path="/images/:query/:id">
-          <SearchPage />
           <ImageDetail />
         </Route>
       </Switch>
