@@ -19,7 +19,7 @@ function Header(props) {
   };
 
   return (
-    <div className="headerContainer">
+    <div className="headerContainer" style={{ zIndex: 1 }}>
       <div className="headerLeft">
         <Link className="logo" to="/">
           <span>We Images</span>

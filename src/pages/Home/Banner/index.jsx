@@ -17,7 +17,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 const backgroundImage = 'https://d770yb0u0jpdg.cloudfront.net/wp-content/uploads/2019/01/how-to-brief-a-web-designer-388161091.jpg';
 
-export default function ProductHero() {
+export default function Banner() {
   return (
     <BannerLayout
       sxBackground={{
@@ -43,7 +43,7 @@ export default function ProductHero() {
           mt: 20,
           display: 'flex',
           flexDirection: 'column',
-          alignItems: 'center',
+          alignItems: 'center'
         }}>
         <Typography 
           color="#2264D1"
