@@ -5,6 +5,7 @@ import './imageCard.css';
 function ImageCard(props) {
   const [span, setSpan] = useState(0);
   const imageRef = useRef(null);
+  const { query } = props;
   const { urls, description, id } = props.image;
   useEffect(() => {
     imageRef.current.addEventListener('load', () => {
@@ -15,7 +16,7 @@ function ImageCard(props) {
   }, []);
   return (
     <Link
-      to={`/images/${id}`}
+      to={`/images/${query}/${id}`}
       style={{ gridRowEnd: `${span} span`, cursor: 'pointer' }}
     >
       <img

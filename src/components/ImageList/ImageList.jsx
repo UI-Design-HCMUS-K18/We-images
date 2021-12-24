@@ -22,7 +22,7 @@ function ImageList(props) {
   return (
     <div className="imageList">
       {images.map((image) => (
-        <ImageCard key={image.id} image={image} />
+        <ImageCard query={query} key={image.id} image={image} />
       ))}
     </div>
   );
