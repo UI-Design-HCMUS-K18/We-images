@@ -1,11 +1,15 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Visibility, Favorite, Comment } from '@mui/icons-material';
 import './imageCard.css';
+import { fontWeight } from '@mui/system';
 
 function ImageCard(props) {
   const [span, setSpan] = useState(0);
+  console.log(props.image);
   const imageRef = useRef(null);
-  const { urls, description, id } = props.image;
+  const { query } = props;
+  const { urls, description, alt_description, id } = props.image;
   useEffect(() => {
     imageRef.current.addEventListener('load', () => {
       const height = imageRef.current.clientHeight;
@@ -15,8 +19,13 @@ function ImageCard(props) {
   }, []);
   return (
     <Link
-      to={`/images/${id}`}
-      style={{ gridRowEnd: `${span} span`, cursor: 'pointer' }}
+      to={`/images/${query}/${id}`}
+      className="imageWrap"
+      style={{
+        gridRowEnd: `${span} span`,
+        cursor: 'pointer',
+        position: 'relative',
+      }}
     >
       <img
         className="imageCard"
@@ -24,6 +33,25 @@ function ImageCard(props) {
         src={urls.regular}
         alt={description}
       />
+      <div className="imageDescription">
+        <h4 style={{ fontSize: '24px', marginBottom: '6px' }}>Sunset</h4>
+        <h5 style={{ fontSize: '16px', fontWeight: '500' }}>08/11/2021</h5>
+        <p style={{ fontSize: '14px' }}>20:15</p>
+        <div className="imageIconList">
+          <div className="iconItem">
+            <Visibility className="chat-icon imageHoverIcon" />
+            <span>1103</span>
+          </div>
+          <div className="iconItem">
+            <Favorite className="favorite-icon imageHoverIcon" />
+            <span>203</span>
+          </div>
+          <div className="iconItem">
+            <Comment className="comment-icon imageHoverIcon" />
+            <span>103</span>
+          </div>
+        </div>
+      </div>
     </Link>
   );
 }

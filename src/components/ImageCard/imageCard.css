@@ -1,26 +1,59 @@
-img.imageCard:hover {
-  opacity: 0.7;
+.imageCard {
+  /* display: block;
+  width: 100%;
+  height: auto; */
 }
 
-img.imageCard::before,
-img.imageCard::after {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-top: 32px solid rgba(0, 0, 0, 0.5);
-  border-bottom: 32px solid rgba(0, 0, 0, 0.5);
+.imageDescription {
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
-  content: '';
-  transition: all 0.3s ease;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
   z-index: 1;
   opacity: 0;
-  transform: scaleY(2);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: .4s ease-in-out;
+  width: 250px;
 }
 
-img.imageCard:hover::before,
-img.imageCard:hover::after {
-  transform: scale(1);
+.imageIconList {
+  position: absolute;
+  bottom: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.iconItem {
+  align-items: center;
+  font-size: 14px !important;
+}
+
+.imageWrap:hover .imageDescription {
   opacity: 1;
+}
+
+.imageHoverIcon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: -7px;
+  margin-right: 4px
+}
+
+.chat-icon {
+  color: #fff;
+}
+.favorite-icon {
+  color: red;
+}
+
+comment-icon {
+  color: #fff;
 }
