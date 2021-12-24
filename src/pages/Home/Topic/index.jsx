@@ -1,16 +1,21 @@
 import * as React from 'react';
 import IconButton from '@mui/material/IconButton';
+import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
+import Divider from '@mui/material/Divider';
+import TextField from '@mui/material/TextField';
+import InputBase from '@mui/material/InputBase';
+import Input from '@mui/material/Input';
 import { Box } from '@mui/system';
-
+import { styled } from '@mui/material/styles';
 import LaunchIcon from '@mui/icons-material/Launch';
+import FilterListIcon from '@mui/icons-material/FilterList';
+import SearchIcon from '@mui/icons-material/Search';
+import TopicList from './TopicList';
 
-import ArtistList from './ArtistList';
 
-
-
-export default function TopArtist() {
+export default function Topic() {
   return (
     <Box
       sx={{
@@ -19,7 +24,7 @@ export default function TopArtist() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        height: 400
+        height: 600
       }}
     >
 
@@ -30,15 +35,13 @@ export default function TopArtist() {
           alignItems: 'center'
         }}>
         <Typography variant="h4" sx={{ fontFamily: 'Roboto', fontWeight: 'bold' }}>
-          Top Artists
+          Popular Topics
         </Typography>
         <IconButton aria-label="launch" color="primary">
           <LaunchIcon />
         </IconButton>  
       </Stack>
-      <ArtistList />   
-     
-      
+      <TopicList />   
     </Box>
   );
 }
