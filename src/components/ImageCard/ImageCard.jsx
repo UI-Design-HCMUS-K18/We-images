@@ -2,14 +2,13 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Visibility, Favorite, Comment } from '@mui/icons-material';
 import './imageCard.css';
-import { fontWeight } from '@mui/system';
 
 function ImageCard(props) {
   const [span, setSpan] = useState(0);
   console.log(props.image);
   const imageRef = useRef(null);
   const { query } = props;
-  const { urls, description, alt_description, id } = props.image;
+  const { urls, description, id } = props.image;
   useEffect(() => {
     imageRef.current.addEventListener('load', () => {
       const height = imageRef.current.clientHeight;
