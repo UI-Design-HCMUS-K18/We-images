@@ -8,7 +8,6 @@ import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 function Header(props) {
   const [value, setValue] = useState('');
   const isHomePage = useLocation().pathname === '/';
-  console.log(isHomePage);
   const handleEnter = (e) => {
     if (e.keyCode === 13) {
       if (value.trim() !== '') {

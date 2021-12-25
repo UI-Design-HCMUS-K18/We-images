@@ -5,11 +5,8 @@ import Typography from '@mui/material/Typography';
 import BannerLayout from './BannerLayout';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
-import TextField from '@mui/material/TextField';
 import InputBase from '@mui/material/InputBase';
-import Input from '@mui/material/Input';
 import { Box } from '@mui/system';
-import { styled } from '@mui/material/styles';
 
 import FilterListIcon from '@mui/icons-material/FilterList';
 import SearchIcon from '@mui/icons-material/Search';
