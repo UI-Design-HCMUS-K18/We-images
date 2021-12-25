@@ -26,7 +26,7 @@ function SideBar({
         : content.length === 1
         ? content[0].items.length
         : content.reduce((a, b) => a.items.length + b.items.length);
-   
+
     for (const key1 in filters) {
       i++;
       if (amounts > 0 && i <= amounts) continue;
@@ -43,7 +43,7 @@ function SideBar({
 
   return (
     <div className={`sidebar ${className}`}>
-      <button className="btn-outline-blue" onClick={onHideHandler} >
+      <button className="btn-outline-blue" onClick={onHideHandler}>
         <KeyboardDoubleArrowLeftIcon className="btn-icon" />
         Hide
       </button>
@@ -51,14 +51,16 @@ function SideBar({
         <FilterList className="btn-icon" />
         Filtering
       </button>
-      {content.map((filter) => (
-        <FilterListComponet
-          key={filter.name}
-          name={filter.name}
-          items={filter.items}
-          onChangeHandler={onChangeFilterHandler}
-        />
-      ))}
+      <div className="filter-content">
+        {content.map((filter) => (
+          <FilterListComponet
+            key={filter.name}
+            name={filter.name}
+            items={filter.items}
+            onChangeHandler={onChangeFilterHandler}
+          />
+        ))}
+      </div>
     </div>
   );
 }
