@@ -20,4 +20,38 @@
 
 .sort {
   margin-right: 350px;
+  margin-left: 75px;
+}
+
+.filter-icon{
+  position: fixed;
+  top: 10%;
+  background-color: aliceblue;
+  color: #2264D1;
+  border: 1px solid #9DC2FF;
+  box-sizing: border-box;
+  width: 90px;
+  height: 50px;
+  cursor: pointer;
+  margin-left: -31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: all 0.3s ease-out;
+}
+.filter_sidebar{
+  transition: all 0.3s ease-out;
+}
+.filterOpen{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.filterClose{
+  opacity: 0;
+  flex:0;
+  width: 0%;
+  padding: 0%;
+  transform: translateX(-100%);
 }
