@@ -199,15 +199,17 @@ export default function ImageDetail() {
           <div className="related-images">
             <h3 className="related-images__title">RELATED IMAGES</h3>
             <Carousel breakPoints={breakPoints}>
-              {images.map((image) => (
-                <Link
-                  to={`/images/${query}/${image.id}`}
-                  key={image.id}
-                  className="related-image"
-                >
-                  <img src={image.urls.small} alt="" />
-                </Link>
-              ))}
+              {images
+                .sort(() => Math.random() - 0.5)
+                .map((image) => (
+                  <Link
+                    to={`/images/${query}/${image.id}`}
+                    key={image.id}
+                    className="related-image"
+                  >
+                    <img src={image.urls.small} alt="" />
+                  </Link>
+                ))}
             </Carousel>
           </div>
 
