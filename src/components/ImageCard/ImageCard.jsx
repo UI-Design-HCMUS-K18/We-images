@@ -5,6 +5,7 @@ import './imageCard.css';
 
 function ImageCard(props) {
   const [span, setSpan] = useState(0);
+  const [imageHeight, setImageHeight] = useState(0);
 
   const imageRef = useRef(null);
   const { query } = props;
@@ -14,6 +15,7 @@ function ImageCard(props) {
       const height = imageRef.current.clientHeight;
       const span = Math.ceil(height / 10);
       setSpan(span);
+      setImageHeight(height);
     });
   }, []);
   return (
@@ -26,28 +28,35 @@ function ImageCard(props) {
         position: 'relative',
       }}
     >
-      <img
-        className="imageCard"
-        ref={imageRef}
-        src={urls.regular}
-        alt={description}
-      />
-      <div className="imageDescription">
-        <h4 style={{ fontSize: '24px', marginBottom: '6px' }}>Sunset</h4>
-        <h5 style={{ fontSize: '16px', fontWeight: '500' }}>08/11/2021</h5>
-        <p style={{ fontSize: '14px' }}>20:15</p>
-        <div className="imageIconList">
-          <div className="iconItem">
-            <Visibility className="chat-icon imageHoverIcon" />
-            <span>1103</span>
-          </div>
-          <div className="iconItem">
-            <Favorite className="favorite-icon imageHoverIcon" />
-            <span>203</span>
-          </div>
-          <div className="iconItem">
-            <Comment className="comment-icon imageHoverIcon" />
-            <span>103</span>
+      <div>
+        <img
+          className="imageCard"
+          ref={imageRef}
+          src={urls.regular}
+          alt={description}
+        />
+        <div
+          style={{
+            height: `${imageHeight !== 0 ? imageHeight + 'px' : 'auto'}`,
+          }}
+          className="imageDescription"
+        >
+          <h4 style={{ fontSize: '24px', marginBottom: '6px' }}>Sunset</h4>
+          <h5 style={{ fontSize: '16px', fontWeight: '500' }}>08/11/2021</h5>
+          <p style={{ fontSize: '14px' }}>20:15</p>
+          <div className="imageIconList">
+            <div className="iconItem">
+              <Visibility className="chat-icon imageHoverIcon" />
+              <span>1103</span>
+            </div>
+            <div className="iconItem">
+              <Favorite className="favorite-icon imageHoverIcon" />
+              <span>203</span>
+            </div>
+            <div className="iconItem">
+              <Comment className="comment-icon imageHoverIcon" />
+              <span>103</span>
+            </div>
           </div>
         </div>
       </div>

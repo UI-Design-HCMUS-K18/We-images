@@ -1,11 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, NotificationsNone, Add, Close } from '@mui/icons-material';
 import history from '../../history';
 import './header.css';
+import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 
 function Header(props) {
-  const [value, setValue] = useState('');
+  const search = useLocation().search;
+
+  const [value, setValue] = useState('nature');
+
+  useEffect(() => {
+    const query = new URLSearchParams(search).get('query');
+    setValue(query);
+  }, [search]);
+
+  const isHomePage = useLocation().pathname === '/';
   const handleEnter = (e) => {
     if (e.keyCode === 13) {
       if (value.trim() !== '') {
@@ -19,28 +29,51 @@ function Header(props) {
   };
 
   return (
-    <div className="headerContainer" style={{ zIndex: 1 }}>
-      <div className="headerLeft">
+    <div
+      className={`headerContainer ${isHomePage ? 'tranparent absolute' : ''}`}
+      style={{ zIndex: 1 }}
+    >
+      <div className={`headerLeft ${isHomePage ? 'flex-half' : ''}`}>
         <Link className="logo" to="/">
-          <span>We Images</span>
+          <h2>
+            <span>W</span>e Images
+          </h2>
         </Link>
+        {isHomePage && (
+          <ul className="menu">
+            <li>
+              <Link to="/">Design</Link>
+            </li>
+            <li>
+              <Link to="/">Themes</Link>
+            </li>
+            <li>
+              <Link to="/">Collections</Link>
+            </li>
+            <li>
+              <Link to="/">More</Link>
+            </li>
+          </ul>
+        )}
       </div>
-      <div className="headerCenter">
-        <div className="searchBar">
-          <div className="searchBarLeft">
-            <Search className="searchIcon" />
-            <input
-              className="searchInput"
-              type="text"
-              placeholder="Search..."
-              value={value}
-              onKeyDown={handleEnter}
-              onChange={handleChange}
-            />
+      {!isHomePage && (
+        <div className="headerCenter">
+          <div className="searchBar">
+            <div className="searchBarLeft">
+              <Search className="searchIcon" />
+              <input
+                className="searchInput"
+                type="text"
+                placeholder="Search..."
+                value={value}
+                onKeyDown={handleEnter}
+                onChange={handleChange}
+              />
+            </div>
+            <Close className="closeIcon" onClick={() => setValue('')} />
           </div>
-          <Close className="closeIcon" />
         </div>
-      </div>
+      )}
       <div className="headerRight">
         <div className="headerIcons">
           <div className="headerNotify headerIconItem">
