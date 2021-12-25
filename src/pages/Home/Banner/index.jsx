@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useRef, useEffect } from 'react';
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -7,7 +7,7 @@ import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import InputBase from '@mui/material/InputBase';
 import { Box } from '@mui/system';
-
+import history from '../../../history';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import SearchIcon from '@mui/icons-material/Search';
 
@@ -15,6 +15,27 @@ const backgroundImage =
   'https://d770yb0u0jpdg.cloudfront.net/wp-content/uploads/2019/01/how-to-brief-a-web-designer-388161091.jpg';
 
 export default function Banner() {
+  const textRef = useRef();
+  const handleEnter = (e) => {
+    if (e.keyCode === 13) {
+      if (textRef.current.value.trim() !== '') {
+        history.push(`/search?query=${textRef.current.value}`);
+      }
+    }
+  };
+
+  const handleSearch = () => {
+    if (textRef.current.value.trim() !== '') {
+      history.push(`/search?query=${textRef.current.value}`);
+    }
+  };
+
+  useEffect(() => {
+    textRef.current.focus();
+    textRef.current.addEventListener('keyup', handleEnter);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <BannerLayout
       sxBackground={{
@@ -132,6 +153,7 @@ export default function Banner() {
                 <InputBase
                   placeholder="Type here..."
                   inputProps={{ 'aria-label': 'search' }}
+                  inputRef={textRef}
                   inputlabelprops={{
                     style: { fontFamily: 'Roboto', fontWeight: 'light' },
                   }}
@@ -142,6 +164,7 @@ export default function Banner() {
                 />
               </Box>
               <Button
+                onClick={handleSearch}
                 variant="contained"
                 sx={{
                   borderTopLeftRadius: '0',

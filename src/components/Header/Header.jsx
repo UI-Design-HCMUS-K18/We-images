@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, NotificationsNone, Add, Close } from '@mui/icons-material';
 import history from '../../history';
@@ -6,7 +6,15 @@ import './header.css';
 import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 
 function Header(props) {
-  const [value, setValue] = useState('');
+  const search = useLocation().search;
+
+  const [value, setValue] = useState('nature');
+
+  useEffect(() => {
+    const query = new URLSearchParams(search).get('query');
+    setValue(query);
+  }, [search]);
+
   const isHomePage = useLocation().pathname === '/';
   const handleEnter = (e) => {
     if (e.keyCode === 13) {
