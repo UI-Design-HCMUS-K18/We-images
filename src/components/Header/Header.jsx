@@ -35,16 +35,16 @@ function Header(props) {
         {isHomePage && (
           <ul className="menu">
             <li>
-              <Link>Design</Link>
+              <Link to="/">Design</Link>
             </li>
             <li>
-              <Link>Themes</Link>
+              <Link to="/">Themes</Link>
             </li>
             <li>
-              <Link>Collections</Link>
+              <Link to="/">Collections</Link>
             </li>
             <li>
-              <Link>More</Link>
+              <Link to="/">More</Link>
             </li>
           </ul>
         )}
