@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
 import SearchPage from './pages/SearchPage/SearchPage';
 import ImageDetail from './pages/ImageDetail/ImageDetail';
+import Footer from './components/Footer/Footer'
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <ImageDetail />
         </Route>
       </Switch>
+      <Footer></Footer>
     </Router>
   );
 }
