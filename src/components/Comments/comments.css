@@ -1,0 +1,48 @@
+.comments {
+  margin-top: 20px;
+  padding: 30px;
+}
+
+.comments .addComment {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.comments .addComment .input {
+  margin-left: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
+}
+
+.comments .addComment .input .field:focus {
+  outline: none;
+}
+
+.comments .addComment .input .comment-button {
+  width: 150px;
+}
+
+.comments .comment__top {
+  display: flex;
+  align-items: center;
+  grid-gap: 20px;
+}
+
+.comments .comment__top span {
+  font-style: italic;
+}
+
+.comments .comment__top .name {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+.comments .comment__content {
+  font-size: 16px;
+  margin-left: 60px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}

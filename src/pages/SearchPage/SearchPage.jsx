@@ -32,16 +32,20 @@ const initialFilter = {
 function SearchPage() {
   const [filters, setFilter] = React.useState(initialFilter);
   const [hidenFilter, setHidenFilter] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(false);
 
   const search = useLocation().search;
   const query = new URLSearchParams(search).get('query');
   console.log(query);
   const [images, setImages] = React.useState([]);
   const fetchImages = React.useCallback(async () => {
+    setIsLoading(true);
     const response = await unsplash.get('/search/photos', {
       params: { query: query, page: 1, per_page: 30 },
     });
+    setIsLoading(false);
     setImages(response.data.results);
+
   },[query])
   React.useEffect(() => {
     fetchImages();
@@ -83,7 +87,7 @@ function SearchPage() {
           <span className="sort">Sort:</span>
           <span className="related">Related tags:</span>
         </div>
-        <ImageList filters={filters} images={images} />
+        <ImageList filters={filters} images={images} loading={isLoading} query={query}/>
       </div>
     </div>
   );

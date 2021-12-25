@@ -18,7 +18,7 @@ function App() {
         <Route path="/search" exact>
           <SearchPage />
         </Route>
-        <Route path="/images">
+        <Route path="/images/:query/:id">
           <ImageDetail />
         </Route>
       </Switch>

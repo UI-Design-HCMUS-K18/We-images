@@ -1,21 +1,27 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import unsplash from '../../api/unsplash';
+import React from 'react';
 import ImageCard from '../ImageCard/ImageCard';
-import { useLocation } from 'react-router-dom';
+import CircularProgress from '@mui/material/CircularProgress';
+
 import './imagelist.css';
 
 function ImageList({
   filters,
-  images
+  images,
+  loading,
+  query
 }) {
   
-  if (images.length === 0) {
-    return <div>Loading...</div>;
+  if (loading) {
+    return (
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <CircularProgress />
+      </div>
+    );
   }
   return (
     <div className="imageList">
       {images.map((image) => (
-        <ImageCard key={image.id} image={image} />
+        <ImageCard query={query} key={image.id} image={image} />
       ))}
     </div>
   );
