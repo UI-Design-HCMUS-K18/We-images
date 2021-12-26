@@ -203,6 +203,7 @@
 .image-modal .image-actions .right .icon-button.download {
   background-color: #00a811;
   color: white;
+  border: none;
 }
 
 .image-modal .menu-item {
