@@ -7,6 +7,8 @@ import VImage from './LayoutComponents/VerticalImage';
 import H2Images from './LayoutComponents/TwoHorizontalImages';
 import HImage from './LayoutComponents/HorizontalImage';
 
+const ItemMargin = '15px'
+
 export default function CollectionItem({ collection }) {
   const img1 = `url(${collection.thumbnails[0].img}`;
   const img2 = `url(${collection.thumbnails[1].img}`;
@@ -22,7 +24,7 @@ export default function CollectionItem({ collection }) {
   const goToSearch = () => {
     mouseUpTime = new Date();
     if (mouseUpTime - mouseDownTime < 300) {
-      let path = `search`;
+      let path = `search?query=${collection.name}`;
       history.push(path);
     }
   }
@@ -30,10 +32,14 @@ export default function CollectionItem({ collection }) {
   const CollectionButton = () => {
     return (
       <Button disableRipple onMouseDown={startDraggingTime} onMouseUp={goToSearch}
-        style={{ marginTop: "10px", margin: "auto", paddingTop: "10px", textDecoration: 'none', color: 'primary' }} >
-        <Typography variant="h6" style={{ marginTop: "10px", margin: "auto" }}>
-          {collection.name}
-        </Typography>
+        style={{
+          margin: "auto", paddingTop: "0px", textDecoration: 'none', color: 'primary', backgroundColor: 'transparent', textTransform: 'none', width: '100%'
+        }} >
+        <Stack>
+          <Typography variant="h6" noWrap style={{ textDecoration: 'none', margin: "auto", color: 'black', textOverflow: "ellipsis", width: '100%', padding: '10px' }}>
+            {collection.name}
+          </Typography>
+        </Stack>
       </Button>
     );
   }
@@ -42,7 +48,7 @@ export default function CollectionItem({ collection }) {
     return (
       <Stack
         direction='column'
-        style={{ width: "100%", height: "100%", alignContent: "center", margin: "15px" }}>
+        style={{ width: "100%", height: "100%", alignContent: "center", margin: ItemMargin }}>
         <Button disableRipple onMouseDown={startDraggingTime} onMouseUp={goToSearch}>
           <Stack
             direction='row'
@@ -62,7 +68,7 @@ export default function CollectionItem({ collection }) {
     return (
       <Stack
         direction='column'
-        style={{ width: "100%", alignContent: "center", margin: "15px" }}>
+        style={{ width: "100%", alignContent: "center", margin: ItemMargin }}>
         <Button disableRipple onMouseDown={startDraggingTime} onMouseUp={goToSearch}>
           <Stack
             direction='row'
@@ -81,7 +87,7 @@ export default function CollectionItem({ collection }) {
     return (
       <Stack
         direction='column'
-        style={{ width: "100%", alignContent: "center", margin: "15px" }}>
+        style={{ width: "100%", alignContent: "center", margin: ItemMargin }}>
         <Button disableRipple onMouseDown={startDraggingTime} onMouseUp={goToSearch}>
           <Stack
             direction='column'
@@ -100,7 +106,7 @@ export default function CollectionItem({ collection }) {
     return (
       <Stack
         direction='column'
-        style={{ width: "100%", alignContent: "center", margin: "15px" }}>
+        style={{ width: "100%", alignContent: "center", margin: ItemMargin }}>
         <Button disableRipple onMouseDown={startDraggingTime} onMouseUp={goToSearch}>
           <Stack
             direction='column'

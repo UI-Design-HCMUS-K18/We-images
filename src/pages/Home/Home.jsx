@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from './Banner';
 import Collection from './Collection'
 import TopArtist from './TopArtist';
+import Feature from './Feature'
 import Topic from './Topic';
 
 function Home() {
@@ -10,6 +11,7 @@ function Home() {
       <Banner />
       <Collection />
       <TopArtist />
+      <Feature />
       <Topic />
     </div>
   );

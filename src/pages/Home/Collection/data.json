@@ -1,61 +1,61 @@
 [
 	{
-		"name": "Flowers",
+		"name": "Christmas 2021",
 		"layoutType": 1,
 		"thumbnails": [
 			{
-				"img": "https://i.pinimg.com/564x/93/54/3e/93543e2e04e12d05915c4ef512721b0b.jpg"
+				"img": "https://i.pinimg.com/564x/eb/92/7c/eb927c7ccb5b12d672a1bcdb00fd3036.jpg"
 			},
 			{
-				"img": "https://i.pinimg.com/564x/21/fb/86/21fb86c402e78b3179ef421f4c9a9372.jpg"
+				"img": "https://i.pinimg.com/564x/c2/29/64/c229640c7b66e17d2d61c80052225ee4.jpg"
 			},
 			{
-				"img": "https://i.pinimg.com/564x/2a/1e/19/2a1e19c115f1e546cb331370386e2f09.jpg"
+				"img": "https://i.pinimg.com/564x/76/37/40/7637405f1a211d695dd388e9a6e643e5.jpg"
 			}
 		]
 	},
 	{
-		"name": "Flowers",
+		"name": "Landscapes",
+		"layoutType": 4,
+		"thumbnails": [
+			{
+				"img": "https://i.pinimg.com/564x/82/bb/d4/82bbd40d34cdae9bb1cc703f3052404f.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/564x/9c/b6/70/9cb67074146464cb6194695a752120f1.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/750x/b2/20/09/b22009c806f812f73022845e29eced79.jpg"
+			}
+		]
+	},
+	{
+		"name": "Portraits",
 		"layoutType": 2,
 		"thumbnails": [
 			{
-				"img": "https://i.pinimg.com/564x/93/54/3e/93543e2e04e12d05915c4ef512721b0b.jpg"
+				"img": "https://i.pinimg.com/564x/93/22/15/932215fedbba7f0ddeb4d5eb105acdda.jpg"
 			},
 			{
-				"img": "https://i.pinimg.com/564x/21/fb/86/21fb86c402e78b3179ef421f4c9a9372.jpg"
+				"img": "https://i.pinimg.com/564x/1f/3a/4a/1f3a4a42884dbf4f84497ece3f9c4ea3.jpg"
 			},
 			{
-				"img": "https://i.pinimg.com/564x/2a/1e/19/2a1e19c115f1e546cb331370386e2f09.jpg"
+				"img": "https://i.pinimg.com/236x/2e/cd/18/2ecd18bf85b7cef263f2ed480afb45d8.jpg"
 			}
 		]
 	},
 	{
-		"name": "Flowers",
-		"layoutType": 3,
+		"name": "Design Icons",
+		"layoutType": 2,
 		"thumbnails": [
 			{
-				"img": "https://i.pinimg.com/564x/93/54/3e/93543e2e04e12d05915c4ef512721b0b.jpg"
+				"img": "https://i.pinimg.com/564x/b2/00/e5/b200e52dcd6da015ff24e31489ae9ebe.jpg"
 			},
 			{
-				"img": "https://i.pinimg.com/564x/21/fb/86/21fb86c402e78b3179ef421f4c9a9372.jpg"
+				"img": "https://i.pinimg.com/564x/1a/01/77/1a017770490a0f8a52f3472b9c05daf0.jpg"
 			},
 			{
-				"img": "https://i.pinimg.com/564x/2a/1e/19/2a1e19c115f1e546cb331370386e2f09.jpg"
-			}
-		]
-	},
-	{
-		"name": "Flowers",
-		"layoutType": 1,
-		"thumbnails": [
-			{
-				"img": "https://i.pinimg.com/564x/93/54/3e/93543e2e04e12d05915c4ef512721b0b.jpg"
-			},
-			{
-				"img": "https://i.pinimg.com/564x/21/fb/86/21fb86c402e78b3179ef421f4c9a9372.jpg"
-			},
-			{
-				"img": "https://i.pinimg.com/564x/2a/1e/19/2a1e19c115f1e546cb331370386e2f09.jpg"
+				"img": "https://i.pinimg.com/564x/58/ca/e5/58cae54bf1ba4919b68251afb8e2f16d.jpg"
 			}
 		]
 	},
