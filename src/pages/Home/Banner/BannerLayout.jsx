@@ -31,7 +31,7 @@ function BannerLayout(props) {
       <Container
         sx={{
           mt: 3,
-          mb: 14,
+          mb: 9,
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',

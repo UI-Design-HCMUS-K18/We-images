@@ -27,7 +27,7 @@ export default function ArtistList() {
 
   return (
     <Carousel
-      style={{ width: "100%", marginTop: "20px" }}
+      style={{ width: "100%", marginTop: "40px" }}
       breakPoints={breakPoints}
       ref={carouselRef}
       onPrevStart={onPrevStart}

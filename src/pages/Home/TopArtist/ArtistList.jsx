@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
+import Grid from '@mui/material/Grid';
 import Avatar from '@mui/material/Avatar';
 
 const data = [
@@ -36,64 +37,70 @@ const data = [
 
 export default function ArtistList() {
   return (
-    <Stack
+    <Grid
+      container 
+      spacing={8}
       sx={{
-        mt: 5,
+        mt: -0.5,
         display: 'flex',
         flexDirection: 'row',
-        alignItems: 'center',
+        alignItems: 'center'
       }}
     >
       {data.map((artist, index) => (
-        <Stack
-          key={index}
-          sx={{
-            ml: 7,
-            mr: 7,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
-        >
-          <Avatar
-            alt={`avatar${artist.id}`}
-            src={artist.img}
-            sx={{ width: 100, height: 100 }}
-          />
-          <Typography
-            variant="h6"
-            sx={{ mt: 2, fontFamily: 'Roboto', fontWeight: 'bold' }}
-          >
-            {artist.FullName}
-          </Typography>
-          <Typography
-            variant="body2"
-            sx={{ fontFamily: 'Roboto', fontWeight: 'medium' }}
-          >
-            {artist.Description}
-          </Typography>
+        <Grid item xs={6} md={3}>
           <Stack
+            key={index}
             sx={{
+              ml: 7,
+              mr: 7,
               display: 'flex',
-              flexDirection: 'row',
+              flexDirection: 'column',
+              alignItems: 'center'
             }}
           >
+            <Avatar
+              alt={`avatar${artist.id}`}
+              src={artist.img}
+              sx={{ width: 120, height: 120 }}
+            />
+            <Typography
+              variant="h6"
+              align="center"
+              sx={{ mt: 2, fontFamily: 'Roboto', fontWeight: 'bold' }}
+            >
+              {artist.FullName}
+            </Typography>
             <Typography
               variant="body2"
+              align="center"
               sx={{ fontFamily: 'Roboto', fontWeight: 'medium' }}
             >
-              Tag:
+              {artist.Description}
             </Typography>
-            <Typography
-              variant="body2"
-              color="primary"
-              sx={{ ml: 0.5, fontFamily: 'Roboto', fontWeight: 'medium' }}
+            <Stack
+              sx={{
+                display: 'flex',
+                flexDirection: 'row',
+              }}
             >
-              {artist.Tag}
-            </Typography>
+              <Typography
+                variant="body2"
+                sx={{ fontFamily: 'Roboto', fontWeight: 'medium' }}
+              >
+                Tag:
+              </Typography>
+              <Typography
+                variant="body2"
+                color="primary"
+                sx={{ ml: 0.5, fontFamily: 'Roboto', fontWeight: 'medium' }}
+              >
+                {artist.Tag}
+              </Typography>
+            </Stack>
           </Stack>
-        </Stack>
+        </Grid>
       ))}
-    </Stack>
+    </Grid>
   );
 }

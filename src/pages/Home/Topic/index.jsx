@@ -11,7 +11,7 @@ export default function Topic() {
   return (
     <Box
       sx={{
-        p: 10,
+        p: 8,
         backgroundColor: '#FAFAFA',
         display: 'flex',
         flexDirection: 'column',

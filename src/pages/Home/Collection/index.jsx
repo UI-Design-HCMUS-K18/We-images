@@ -10,6 +10,8 @@ export default function Collection() {
   return (
     <Box
       sx={{
+        mt: 2,
+        mb: 2,
         padding: '40px 60px 60px 60px',
         backgroundColor: 'white',
         display: 'flex',

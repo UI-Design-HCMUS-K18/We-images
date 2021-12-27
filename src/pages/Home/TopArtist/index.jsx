@@ -14,12 +14,12 @@ export default function TopArtist() {
   return (
     <Box
       sx={{
-        p: 10,
+        p: 8,
         backgroundColor: '#FAFAFA',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        height: 400
+        height: 'auto'
       }}
     >
 

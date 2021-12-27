@@ -49,16 +49,11 @@ export default function Banner() {
         src={backgroundImage}
         alt="increase priority"
       />
-      <Box
-        sx={{
-          height: 100,
-        }}
-      />
 
       <Stack
         spacing={10}
         sx={{
-          mt: 20,
+          mt: 30,
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -73,6 +68,7 @@ export default function Banner() {
             p: 1,
             pl: 2,
             pr: 2,
+            mb: -1,
             boxShadow: 3,
             borderRadius: '50px',
             backgroundColor: '#FFFFFF',
