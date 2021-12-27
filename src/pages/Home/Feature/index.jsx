@@ -1,5 +1,4 @@
 import * as React from 'react';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import { Box } from '@mui/system';

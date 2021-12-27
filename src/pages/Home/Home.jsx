@@ -4,6 +4,7 @@ import Collection from './Collection'
 import TopArtist from './TopArtist';
 import Feature from './Feature'
 import Topic from './Topic';
+import Footer from '../../components/Footer/Footer'
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <TopArtist />
       <Feature />
       <Topic />
+      <Footer />
     </div>
   );
 }
