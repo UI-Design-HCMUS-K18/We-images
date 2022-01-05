@@ -1,0 +1,182 @@
+[
+	{
+		"name": "Christmas 2021",
+		"layoutType": 1,
+		"thumbnails": [
+			{
+				"img": "https://i.pinimg.com/564x/eb/92/7c/eb927c7ccb5b12d672a1bcdb00fd3036.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/564x/c2/29/64/c229640c7b66e17d2d61c80052225ee4.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/564x/76/37/40/7637405f1a211d695dd388e9a6e643e5.jpg"
+			}
+		]
+	},
+	{
+		"name": "Landscapes",
+		"layoutType": 4,
+		"thumbnails": [
+			{
+				"img": "https://i.pinimg.com/564x/82/bb/d4/82bbd40d34cdae9bb1cc703f3052404f.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/564x/9c/b6/70/9cb67074146464cb6194695a752120f1.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/750x/b2/20/09/b22009c806f812f73022845e29eced79.jpg"
+			}
+		]
+	},
+	{
+		"name": "Portraits",
+		"layoutType": 2,
+		"thumbnails": [
+			{
+				"img": "https://i.pinimg.com/564x/93/22/15/932215fedbba7f0ddeb4d5eb105acdda.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/564x/1f/3a/4a/1f3a4a42884dbf4f84497ece3f9c4ea3.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/236x/2e/cd/18/2ecd18bf85b7cef263f2ed480afb45d8.jpg"
+			}
+		]
+	},
+	{
+		"name": "Design Icons",
+		"layoutType": 2,
+		"thumbnails": [
+			{
+				"img": "https://i.pinimg.com/564x/b2/00/e5/b200e52dcd6da015ff24e31489ae9ebe.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/564x/1a/01/77/1a017770490a0f8a52f3472b9c05daf0.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/564x/58/ca/e5/58cae54bf1ba4919b68251afb8e2f16d.jpg"
+			}
+		]
+	},
+	{
+		"name": "Into the Wild",
+		"layoutType": 2,
+		"thumbnails": [
+			{
+				"img": "https://i.pinimg.com/236x/1d/5f/ff/1d5fffe143c08fef990aba93ddb59a2e.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/564x/65/6b/f1/656bf1c4d58b19d117f4b672067b1ab9.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/736x/fe/fd/57/fefd57bf74053bac9f4e3609ad44bac2.jpg"
+			}
+		]
+	},
+	{
+		"name": "Cyber City",
+		"layoutType": 2,
+		"thumbnails": [
+			{
+				"img": "https://i.pinimg.com/550x/77/98/a2/7798a274d5500321b491c87c0bf5d50e.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/736x/0e/f9/29/0ef92922c739d1ca93e88b7dccf791e1.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/736x/dc/a0/b6/dca0b6205dad170ab05a814e14ee887c.jpg"
+			}
+		]
+	},
+	{
+		"name": "Dreamy Clouds",
+		"layoutType": 1,
+		"thumbnails": [
+			{
+				"img": "https://i.pinimg.com/originals/0e/d2/ff/0ed2ff26d9ae073ced0bd81288f1b4be.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/736x/ba/46/2c/ba462c87c00f13b2f630f1c80b403b35.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/736x/09/6e/38/096e38e7344694df4762f5d4f0cef54e.jpg"
+			}
+		]
+	},
+	{
+		"name": "Emotional Collection",
+		"layoutType": 3,
+		"thumbnails": [
+			{
+				"img": "https://i.pinimg.com/originals/90/3c/b4/903cb4759245be7b63c29c447596e90f.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/originals/81/bf/2a/81bf2aec1c9b150850a9b46db7377c6f.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/236x/24/48/75/2448755f116c7ff58eca418c51370d23.jpg"
+			}
+		]
+	},
+	{
+		"name": "Rainy Days",
+		"layoutType": 2,
+		"thumbnails": [
+			{
+				"img": "https://i.pinimg.com/550x/40/32/48/403248cbe2dd03c56ee0fd86a6f7ee7a.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/474x/02/b3/d5/02b3d5ca5636eaa86522dbeb9764b6d4.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/736x/ee/69/81/ee69814ee5e174d8c1493cd529473591.jpg"
+			}
+		]
+	},
+	{
+		"name": "Only Pencil",
+		"layoutType": 3,
+		"thumbnails": [
+			{
+				"img": "https://i.pinimg.com/564x/c7/8a/c7/c78ac79590fdbd1993443d283f461634.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/736x/c4/8c/3d/c48c3d23d49cd8ec1da6d3f6816a36fc.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/736x/f6/f1/79/f6f1796e21ada88005138890115b89c2.jpg"
+			}
+		]
+	},
+	{
+		"name": "Photography",
+		"layoutType": 3,
+		"thumbnails": [
+			{
+				"img": "https://i.pinimg.com/736x/a4/22/35/a42235144e68ef7c246bc5a28cd0e7b2.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/564x/46/a3/0a/46a30a54e035b54e6dc3c831c8467b2a.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/originals/a4/9c/dc/a49cdc73bace25b2463c4142e8b209bc.jpg"
+			}
+		]
+	},
+	{
+		"name": "Flowers",
+		"layoutType": 1,
+		"thumbnails": [
+			{
+				"img": "https://i.pinimg.com/564x/93/54/3e/93543e2e04e12d05915c4ef512721b0b.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/564x/21/fb/86/21fb86c402e78b3179ef421f4c9a9372.jpg"
+			},
+			{
+				"img": "https://i.pinimg.com/564x/2a/1e/19/2a1e19c115f1e546cb331370386e2f09.jpg"
+			}
+		]
+	}
+]

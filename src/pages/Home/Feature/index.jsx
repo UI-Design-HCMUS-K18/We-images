@@ -1,39 +1,35 @@
 import * as React from 'react';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import { Box } from '@mui/system';
-import LaunchIcon from '@mui/icons-material/Launch';
-import TopicList from './TopicList';
 
+import FeatureList from './FeatureList';
 
-export default function Topic() {
+export default function Features() {
   return (
     <Box
       sx={{
-        p: 8,
-        backgroundColor: '#FAFAFA',
+        mt: 2,
+        mb: 2,
+        padding: '40px 60px 60px 60px',
+        backgroundColor: 'white',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        height: '100%'
+        height: "100%"
       }}
     >
-
-      <Stack 
+      <Stack
         sx={{
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center'
         }}>
         <Typography variant="h4" sx={{ fontFamily: 'Roboto', fontWeight: 'bold' }}>
-          Popular Topics
+          Features
         </Typography>
-        <IconButton aria-label="launch" color="primary">
-          <LaunchIcon />
-        </IconButton>  
       </Stack>
-      <TopicList />   
+      <FeatureList />
     </Box>
   );
 }

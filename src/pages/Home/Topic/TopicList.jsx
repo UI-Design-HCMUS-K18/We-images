@@ -61,15 +61,15 @@ const data = [
 
 export default function ArtistList() {
   return (
-    <Grid container spacing="15px" padding="15px" sx={{ mt: 5, mb: 5 }}>
+    <Grid container padding="15px" justifyContent="center" sx={{ mt: 4, mb: 4 }}>
       {data.map((topic) => (
         <Grid item key={topic.id}> 
-          <Card sx={{ ml: 2, mr: 2, width: 250, borderRadius: '10px' }}>
+          <Card sx={{ m:2, width: 260, borderRadius: '10px' }}>
             <CardActionArea>
               <CardMedia
                 component="img"
-                height="140"
-                width="250"
+                height="160"
+                width="260"
                 image={topic.img}
                 alt={`topic${topic.id}`}
               > 
