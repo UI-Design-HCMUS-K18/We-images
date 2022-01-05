@@ -60,6 +60,7 @@ function SideBar({
             onChangeHandler={onChangeFilterHandler}
           />
         ))}
+        <p className='copy-right'><span>Privacy</span><span>Terms</span><span>Policy</span></p>
       </div>
     </div>
   );

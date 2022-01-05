@@ -15,7 +15,7 @@ const FilterListComponet = ({
 }) => {
   return (
     <Box sx={{ display: 'flex' }}>
-      <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
+      <FormControl sx={{ m: 2, marginBottom:0 }} component="fieldset" variant="standard">
         <FormLabel component="legend">
           {name}
           <span>
