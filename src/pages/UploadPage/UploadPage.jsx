@@ -72,6 +72,7 @@ export default function UploadPage() {
             setImages([...images, ...event.target.files]);
             event.target.value = null;
           }}
+          accept="image/x-png,image/gif,image/jpeg"
         />
       </div>
     </div>
