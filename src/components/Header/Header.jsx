@@ -80,10 +80,12 @@ function Header(props) {
             <NotificationsNone />
           </div>
           <div className="headerUpload headerIconItem">
-            <button className="headerUploadBtn">
-              <Add className="addIcon" />
-              Upload
-            </button>
+            <Link className="link" to="/upload">
+              <button className="headerUploadBtn">
+                <Add className="addIcon" />
+                Upload
+              </button>
+            </Link>
           </div>
           <img
             className="headerAvatar headerIconItem"

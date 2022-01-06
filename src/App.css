@@ -9,3 +9,6 @@ html {
   font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
 }
+.link {
+  text-decoration: none;
+}
