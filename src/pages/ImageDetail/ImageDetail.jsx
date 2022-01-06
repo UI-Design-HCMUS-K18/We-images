@@ -30,6 +30,7 @@ import Moment from 'react-moment';
 import unsplash from '../../api/unsplash';
 import Carousel from 'react-elastic-carousel';
 import Comments from '../../components/Comments/Comments';
+import { Tooltip } from '@mui/material';
 
 const capitalize = (s) => {
   if (typeof s !== 'string') return '';
@@ -148,28 +149,39 @@ export default function ImageDetail() {
               </div>
             </div>
             <div className="right">
-              <IconButton className="icon-button download">
-                <DownloadIcon />
-              </IconButton>
+              <Tooltip title="Download">
+                <IconButton className="icon-button download">
+                  <DownloadIcon />
+                </IconButton>
+              </Tooltip>
               {like ? (
-                <IconButton className="icon-button">
-                  <FavoriteIcon onClick={() => setLike(!like)} />
-                </IconButton>
+                <Tooltip title="Liked">
+                  <IconButton className="icon-button">
+                    <FavoriteIcon onClick={() => setLike(!like)} />
+                  </IconButton>
+                </Tooltip>
               ) : (
-                <IconButton className="icon-button">
-                  <FavoriteBorderIcon onClick={() => setLike(!like)} />
-                </IconButton>
+                <Tooltip title="Like">
+                  <IconButton className="icon-button">
+                    <FavoriteBorderIcon onClick={() => setLike(!like)} />
+                  </IconButton>
+                </Tooltip>
               )}
-
-              <IconButton className="icon-button">
-                <AddIcon />
-              </IconButton>
-              <IconButton className="icon-button">
-                <ShareIcon />
-              </IconButton>
-              <IconButton className="icon-button">
-                <MoreHorizIcon />
-              </IconButton>
+              <Tooltip title="Add Album">
+                <IconButton className="icon-button">
+                  <AddIcon />
+                </IconButton>
+              </Tooltip>
+              <Tooltip title="Share">
+                <IconButton className="icon-button">
+                  <ShareIcon />
+                </IconButton>
+              </Tooltip>
+              <Tooltip title="More">
+                <IconButton className="icon-button">
+                  <MoreHorizIcon />
+                </IconButton>
+              </Tooltip>
             </div>
           </div>
 

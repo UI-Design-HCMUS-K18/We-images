@@ -15,12 +15,11 @@ const FilterListComponet = ({
 }) => {
   return (
     <Box sx={{ display: 'flex' }}>
-      <FormControl sx={{ m: 2, marginBottom:0 }} component="fieldset" variant="standard">
+      <FormControl sx={{ m: 1, marginBottom:0 }} component="fieldset" variant="standard">
         <FormLabel component="legend">
           {name}
           <span>
-            {' '}
-            <ExpandMoreIcon sx={{ ml: 1, position: 'absolute' }} />
+            <ExpandMoreIcon sx={{ ml: 0, position: 'absolute' }} />
           </span>
         </FormLabel>
         {items.map((item) => (
