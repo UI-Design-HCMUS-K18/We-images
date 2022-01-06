@@ -4,6 +4,7 @@ import { Search, NotificationsNone, Add, Close } from '@mui/icons-material';
 import history from '../../history';
 import './header.css';
 import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
+import { Tooltip } from '@mui/material';
 
 function Header(props) {
   const search = useLocation().search;
@@ -34,11 +35,13 @@ function Header(props) {
       style={{ zIndex: 1 }}
     >
       <div className={`headerLeft ${isHomePage ? 'flex-half' : ''}`}>
+        <Tooltip title="Homepage">
         <Link className="logo" to="/">
           <h2>
             <span>W</span>e Images
           </h2>
         </Link>
+        </Tooltip>
         {isHomePage && (
           <ul className="menu">
             <li>
@@ -77,7 +80,9 @@ function Header(props) {
       <div className="headerRight">
         <div className="headerIcons">
           <div className="headerNotify headerIconItem">
+            <Tooltip title="Notifications">
             <NotificationsNone />
+            </Tooltip>
           </div>
           <div className="headerUpload headerIconItem">
             <button className="headerUploadBtn">
