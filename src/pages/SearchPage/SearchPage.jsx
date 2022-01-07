@@ -45,8 +45,7 @@ function SearchPage() {
     });
     setIsLoading(false);
     setImages(response.data.results);
-
-  },[query])
+  }, [query]);
   React.useEffect(() => {
     fetchImages();
   }, [query, fetchImages]);
@@ -65,12 +64,15 @@ function SearchPage() {
     'filter-icon',
     hidenFilter ? 'filterOpen' : 'filterClose',
   ];
-  const classFilter = ['filter_sidebar', hidenFilter ? 'filterClose' : 'filterOpen'];
+  const classFilter = [
+    'filter_sidebar',
+    hidenFilter ? 'filterClose' : 'filterOpen',
+  ];
 
   return (
     <div className="searchPageContainer">
       <div className={classIconFilter.join(' ')} onClick={onHideHandler}>
-        <FilterList sx={{ fontSize: 32, paddingRight:1 }} />
+        <FilterList sx={{ fontSize: 32, paddingRight: 1 }} />
         <span>Filter</span>
       </div>
 
@@ -87,7 +89,16 @@ function SearchPage() {
           <span className="sort">Sort:</span>
           <span className="related">Related tags:</span>
         </div>
-        <ImageList filters={filters} images={images} loading={isLoading} query={query}/>
+        {images.length === 0 && (
+          <p className="notification">Can't find photo by search keyword</p>
+        )}
+
+        <ImageList
+          filters={filters}
+          images={images}
+          loading={isLoading}
+          query={query}
+        />
       </div>
     </div>
   );

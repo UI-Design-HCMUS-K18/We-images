@@ -13,7 +13,7 @@
 
 .filter {
   margin-bottom: 24px;
-  color: #2264D1;
+  color: #2264d1;
   line-height: 24px;
   letter-spacing: 0.44px;
 }
@@ -23,12 +23,12 @@
   margin-left: 75px;
 }
 
-.filter-icon{
+.filter-icon {
   position: fixed;
   top: 10%;
   background-color: aliceblue;
-  color: #2264D1;
-  border: 1px solid #9DC2FF;
+  color: #2264d1;
+  border: 1px solid #9dc2ff;
   box-sizing: border-box;
   width: 90px;
   height: 50px;
@@ -40,18 +40,23 @@
   z-index: 10;
   transition: all 0.3s ease-out;
 }
-.filter_sidebar{
+.filter_sidebar {
   transition: all 0.3s ease-out;
 }
-.filterOpen{
+.filterOpen {
   opacity: 1;
   transform: translateX(0);
 }
 
-.filterClose{
+.filterClose {
   opacity: 0;
-  flex:0;
+  flex: 0;
   width: 0%;
   padding: 0%;
   transform: translateX(-100%);
+}
+
+.searchPageContainer .notification {
+  margin-top: 10px;
+  text-align: center;
 }
