@@ -5,9 +5,12 @@ import AddIcon from '@mui/icons-material/Add';
 import CloseIcon from '@mui/icons-material/Close';
 import DeleteIcon from '@mui/icons-material/Delete';
 import FileUploadIcon from '@mui/icons-material/FileUpload';
+import { useHistory } from 'react-router-dom';
 
 export default function UploadPage() {
   const [images, setImages] = useState([]);
+
+  const history = useHistory();
 
   const deleteImage = (index) => {
     const newImages = [...images];
@@ -17,6 +20,17 @@ export default function UploadPage() {
 
   const clearImages = () => {
     setImages([]);
+  };
+
+  const saveImages = () => {
+    console.log(images);
+    localStorage.setItem(
+      'images',
+      JSON.stringify(
+        images.map((image) => ({ src: URL.createObjectURL(image) }))
+      )
+    );
+    history.push('/editupload');
   };
 
   return (
@@ -58,7 +72,7 @@ export default function UploadPage() {
             <DeleteIcon className="icon" />
             <p>Clear</p>
           </label>
-          <label className="upload-btn">
+          <label onClick={saveImages} className="upload-btn">
             <FileUploadIcon className="icon" />
             <p>Upload</p>
           </label>

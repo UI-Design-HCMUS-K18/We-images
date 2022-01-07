@@ -1,24 +1,24 @@
-.image-box{
+.image-box {
   color: white;
 }
-.image-box .item{
+.image-box .item {
   margin-left: 40px;
   font-weight: 200;
 }
 
-.edit-btn{
+.edit-btn {
   margin-right: 40px;
   display: flex;
 }
 
-.edit-icon{
+.edit-icon {
   margin-right: 5px;
 }
-.edit-title{
+.edit-title {
   font-size: 20px;
 }
 
-.images{
+.images {
   margin: 60px 0px;
   display: flex;
   justify-content: space-evenly;
@@ -30,42 +30,47 @@
   justify-content: center;
   margin-bottom: 60px;
 }
-.thumbnail div.image{
+.thumbnail div.image {
   width: 145px;
   height: 145px;
   overflow: hidden;
 }
-.thumbnail div.image img{
+.thumbnail div.image img {
   width: 100%;
   height: auto;
 }
-.thumbnail .container{
+.thumbnail .container {
   display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    margin-left: 30px;
-    color: white;
-    font-weight: 300;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+  color: white;
+  font-weight: 300;
 }
-.thumbnail .content{
+.thumbnail .content {
   background-color: #565656;
   display: flex;
   padding: 20px;
-
 }
-.thumbnail .title{
+.thumbnail .title {
   margin-bottom: 16px;
   font-size: 28px;
   font-weight: 500;
 }
 
-.thumbnail button{
+.thumbnail button {
   width: 70px;
   height: 27px;
-  background: #2F2F2F;
+  background: #2f2f2f;
   border: none;
   border-radius: 10px;
   color: white;
+}
+
+.img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
 }

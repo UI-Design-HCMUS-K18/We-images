@@ -1,18 +1,26 @@
 import { Grid, Typography } from '@mui/material';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
-import React from 'react';
+import React, { useEffect } from 'react';
 import classes from './EditUpload.module.css';
 const EditUpload = () => {
+  const [images, setImages] = React.useState([]);
+
+  useEffect(() => {
+    const newImages = JSON.parse(localStorage.getItem('images'));
+    setImages(newImages);
+
+    //localStorage.setItem('images', []);
+  }, []);
   return (
     <Grid>
-      <Grid container style={{ marginTop: 200, justifyContent: 'center' }}>
-        <Typography component="h2" variant="h3">
+      <Grid container style={{ marginTop: 100, justifyContent: 'center' }}>
+        <Typography component="h2" variant="h4" sx={{ fontWeight: 'bold' }}>
           Edit your images information
         </Typography>
         <Grid
           item
           style={{
-            marginTop: 50,
+            marginTop: 20,
             width: '100%',
             backgroundColor: '#3D3D3D',
           }}
@@ -63,11 +71,27 @@ const EditUpload = () => {
             </Grid>
           </Grid>
 
-          <Grid className={classes.images}>
-            <img src="./images/unsplash_z8pAEjUUxbY.png" alt="olala" />
-            <img src="./images/unsplash_-MCrF6hnojU.png" alt="olala" />
-            <img src="./images/unsplash_yihlaRCCvd4.png" alt="olala" />
-            <img src="./images/unsplash_zv3ckJKftC4.png" alt="olala" />
+          <Grid
+            className={classes.images}
+            container
+            rowSpacing={{ xs: 1, sm: 2, md: 3 }}
+            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+            sx={{
+              paddingLeft: '100px',
+              paddingRight: '100px',
+              paddingTop: '20px',
+            }}
+          >
+            {images.map((image, index) => (
+              <Grid item xs={3}>
+                <img
+                  className={classes.img}
+                  key={index}
+                  src={image.src}
+                  alt="abc"
+                />
+              </Grid>
+            ))}
           </Grid>
           <Grid className={classes.thumbnail}>
             <div className={classes.content}>
