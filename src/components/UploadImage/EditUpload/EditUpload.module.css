@@ -1,0 +1,71 @@
+.image-box{
+  color: white;
+}
+.image-box .item{
+  margin-left: 40px;
+  font-weight: 200;
+}
+
+.edit-btn{
+  margin-right: 40px;
+  display: flex;
+}
+
+.edit-icon{
+  margin-right: 5px;
+}
+.edit-title{
+  font-size: 20px;
+}
+
+.images{
+  margin: 60px 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+.thumbnail {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.thumbnail div.image{
+  width: 145px;
+  height: 145px;
+  overflow: hidden;
+}
+.thumbnail div.image img{
+  width: 100%;
+  height: auto;
+}
+.thumbnail .container{
+  display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    color: white;
+    font-weight: 300;
+}
+.thumbnail .content{
+  background-color: #565656;
+  display: flex;
+  padding: 20px;
+
+}
+.thumbnail .title{
+  margin-bottom: 16px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.thumbnail button{
+  width: 70px;
+  height: 27px;
+  background: #2F2F2F;
+  border: none;
+  border-radius: 10px;
+  color: white;
+}

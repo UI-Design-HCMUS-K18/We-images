@@ -6,6 +6,7 @@ import Home from './pages/Home/Home';
 import SearchPage from './pages/SearchPage/SearchPage';
 import ImageDetail from './pages/ImageDetail/ImageDetail';
 import './App.css';
+import EditUpload from './components/UploadImage/EditUpload/EditUpload';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <Header />
       <Switch>
         <Route path="/" exact>
-          <Home />
+          <EditUpload />
         </Route>
         <Route path="/search" exact>
           <SearchPage />
