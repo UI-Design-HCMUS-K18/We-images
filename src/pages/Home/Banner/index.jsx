@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react';
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import BannerLayout from './BannerLayout';
+import BannerLayout from '../../../components/Banner/BannerLayout';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import InputBase from '@mui/material/InputBase';
@@ -43,6 +43,8 @@ export default function Banner() {
         backgroundColor: '#7fc7d9', // Average color of the background image.
         backgroundPosition: 'center',
       }}
+      backgroundOptical="#888888"
+      alignItems='center'
     >
       <img
         style={{ display: 'none' }}

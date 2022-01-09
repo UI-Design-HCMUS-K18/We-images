@@ -29,6 +29,10 @@ function Header(props) {
     setValue(e.target.value);
   };
 
+  const handleClickAvatar = () => {
+    history.push(`/userprofile`);
+  };
+
   return (
     <div
       className={`headerContainer ${isHomePage ? 'tranparent absolute' : ''}`}
@@ -96,6 +100,7 @@ function Header(props) {
             className="headerAvatar headerIconItem"
             src={process.env.PUBLIC_URL + '/images/avatar.jpg'}
             alt="avatar"
+            onClick={handleClickAvatar}
           />
         </div>
       </div>

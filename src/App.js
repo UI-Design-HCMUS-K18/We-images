@@ -8,6 +8,7 @@ import ImageDetail from './pages/ImageDetail/ImageDetail';
 import './App.css';
 import EditUpload from './components/UploadImage/EditUpload/EditUpload';
 import UploadPage from './pages/UploadPage/UploadPage';
+import UserProfile from './pages/UserProfile/UserHome';
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
         </Route>
         <Route path="/editupload">
           <EditUpload />
+        </Route>
+        <Route path="/userprofile">
+          <UserProfile />
         </Route>
       </Switch>
     </Router>

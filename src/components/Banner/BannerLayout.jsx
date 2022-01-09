@@ -24,17 +24,19 @@ const Background = styled(Box)({
 });
 
 function BannerLayout(props) {
-  const { sxBackground, children } = props;
+  const { sxBackground, children, backgroundOptical, alignItems, justifyContent } = props;
 
   return (
     <LayoutRoot>
-      <Container
+      <Box
         sx={{
           mt: 3,
           mb: 9,
           display: 'flex',
           flexDirection: 'column',
-          alignItems: 'center',
+          justifyContent: justifyContent,
+          alignItems: alignItems,
+          width: '150%'
         }}
       >   
         {children}
@@ -45,14 +47,16 @@ function BannerLayout(props) {
             right: 0,
             top: 0,
             bottom: 0,
-            backgroundColor: '#888888',
+            backgroundColor: backgroundOptical,
             opacity: 0.5,
             zIndex: -1,
           }}
         />
-        <Background sx={sxBackground} />
+        <Background sx={sxBackground} >
+          
+        </Background>
         
-      </Container>
+      </Box>
     </LayoutRoot>
   );
 }
