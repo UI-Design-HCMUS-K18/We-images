@@ -1,5 +1,8 @@
 import React from 'react';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Collapse from '@mui/material/Collapse';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+
 import {
   Box,
   FormControl,
@@ -13,29 +16,36 @@ const FilterListComponet = ({
   items, 
   onChangeHandler
 }) => {
+
+  const [open, setOpen] = React.useState(true);
+
+  const handleClick = () => {
+    setOpen(!open);
+  };
+  
   return (
     <Box sx={{ display: 'flex' }}>
       <FormControl sx={{ m: 1, marginBottom:0 }} component="fieldset" variant="standard">
-        <FormLabel component="legend">
+        <FormLabel component="legend" onClick={handleClick}>
           {name}
-          <span>
-            <ExpandMoreIcon sx={{ ml: 0, position: 'absolute' }} />
-          </span>
+          {open ? <ExpandLess sx={{ position: 'absolute' }}/> : <ExpandMore sx={{ position: 'absolute' }}/>} 
         </FormLabel>
         {items.map((item) => (
-          <FormGroup key={item.name}>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  size="small"
-                  checked={item.checked}
-                  onChange={onChangeHandler}
-                  name={item.name.toLowerCase()}
-                />
-              }
-              label={item.name}
-            />
-          </FormGroup>
+          <Collapse in={open} timeout="auto" unmountOnExit>
+            <FormGroup key={item.name}>
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    size="small"
+                    checked={item.checked}
+                    onChange={onChangeHandler}
+                    name={item.name.toLowerCase()}
+                  />
+                }
+                label={item.name}
+              />
+            </FormGroup>
+          </Collapse>
         ))}
       </FormControl>
     </Box>
