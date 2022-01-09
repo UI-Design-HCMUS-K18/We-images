@@ -1,0 +1,50 @@
+.avatarCard {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.avatarDescription {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  opacity: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: .4s ease-in-out;
+  width: 200px;
+}
+
+.avatarIconList {
+  position: absolute;
+  bottom: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.iconItem {
+  align-items: center;
+  font-size: 14px !important;
+}
+
+.avatarWrap:hover .avatarDescription {
+  opacity: 1;
+}
+
+.avatarHoverIcon {
+  width: 42px;
+  height: 42px;
+}
+
+.camera-icon {
+  color: #fff;
+}

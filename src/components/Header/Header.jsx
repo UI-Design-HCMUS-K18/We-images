@@ -98,7 +98,7 @@ function Header(props) {
           </div>
           <img
             className="headerAvatar headerIconItem"
-            src={process.env.PUBLIC_URL + '/images/avatar.jpg'}
+            src='https://i.pravatar.cc/400?img=69'
             alt="avatar"
             onClick={handleClickAvatar}
           />
