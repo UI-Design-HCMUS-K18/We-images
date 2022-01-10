@@ -31,6 +31,8 @@ import unsplash from '../../api/unsplash';
 import Carousel from 'react-elastic-carousel';
 import Comments from '../../components/Comments/Comments';
 import { Tooltip } from '@mui/material';
+import { Stack } from '@mui/material';
+import ViewIcon from '@mui/icons-material/Visibility';
 
 const capitalize = (s) => {
   if (typeof s !== 'string') return '';
@@ -86,6 +88,13 @@ export default function ImageDetail() {
     setOpen(false);
   };
 
+  const isLocationValid = (name) => {
+    if (name) {
+      return true;
+    }
+    return false;
+  }
+
   return (
     <Modal className="image-modal" open={open}>
       <div className="image-modal__container">
@@ -140,12 +149,18 @@ export default function ImageDetail() {
           <div className="image-actions">
             <div className="left">
               <div className="views">
-                <p className="views-text">Views</p>
+                <Stack direction='row'>
+                  <p className="views-text">Views</p>
+                  <ViewIcon style={{marginLeft: '4px'}}></ViewIcon>
+                </Stack>
                 <p className="views-number">{image?.views}</p>
               </div>
               <div className="downloads">
-                <p className="downloads-text">Downloads</p>
-                <p className="downloads-number">{image?.downloads}</p>
+                <Stack direction='row'>
+                  <p className="downloads-text">Downloads</p>
+                  <DownloadIcon></DownloadIcon>
+                </Stack>
+                  <p className="downloads-number">{image?.downloads}</p>
               </div>
             </div>
             <div className="right">
@@ -188,11 +203,11 @@ export default function ImageDetail() {
           <div className="image-info">
             <div className="info name">
               <ImageIcon />
-              {capitalize(image?.alt_description)}
+              {capitalize(image?.alt_description ? image.alt_description : "Untitle")}
             </div>
             <div className="info">
               <LocationOnIcon />
-              {image?.location?.name}
+              {isLocationValid(image?.location?.name) ? image.location.name : "Unavailable"}
             </div>
             <div className="info">
               <EventIcon />
@@ -204,7 +219,7 @@ export default function ImageDetail() {
             </div>
             <div className="info">
               <CameraAltIcon />
-              {image?.exif?.name}
+              {isLocationValid(image?.exif?.name) ? image.exif.name : "Unknown Device"}
             </div>
           </div>
 
