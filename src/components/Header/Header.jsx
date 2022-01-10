@@ -9,7 +9,7 @@ import { Tooltip } from '@mui/material';
 function Header(props) {
   const search = useLocation().search;
 
-  const [value, setValue] = useState('nature');
+  const [value, setValue] = useState('');
 
   useEffect(() => {
     const query = new URLSearchParams(search).get('query');

@@ -48,9 +48,8 @@ export default function ArtistList() {
       }}
     >
       {data.map((artist, index) => (
-        <Grid item xs={6} md={3}>
+        <Grid item key={index} xs={6} md={3}>
           <Stack
-            key={index}
             sx={{
               ml: 7,
               mr: 7,

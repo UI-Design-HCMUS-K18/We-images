@@ -36,8 +36,8 @@ export default function FeatureList() {
   return (
     <Box sx={{ width: '100%', marginTop: '50px' }}>
       <Grid container rowSpacing={1}>
-        {data.map(item => (
-          <Grid xs={12} sm={6} md={4} lg={3} style={{ padding: '15px' }}>
+        {data.map((item, index) => (
+          <Grid item key={index} xs={12} sm={6} md={4} lg={3} style={{ padding: '15px' }}>
             <Paper style={{ margin: "auto", height: "130px", background: "lightgray", padding: "20px 20px", width: "100%" }}>
               <Stack direction="column">
                 <img src={item.icon} width="32px" height="32px" alt="Idea" style={{ margin: 'auto' }} />

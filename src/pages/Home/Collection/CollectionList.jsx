@@ -48,8 +48,8 @@ export default function ArtistList() {
       enableAutoPlay={true}
       autoPlaySpeed={4000}
       disableArrowsOnEnd={false}>
-      {data.map(item => {
-        return (<CollectionLayout collection={item}></CollectionLayout>);
+      {data.map((item,index) => {
+        return (<CollectionLayout key={index} collection={item}></CollectionLayout>);
       })}
     </Carousel>
   );

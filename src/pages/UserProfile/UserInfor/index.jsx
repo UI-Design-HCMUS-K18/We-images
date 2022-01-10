@@ -1,17 +1,14 @@
 import * as React from 'react';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
-import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
-import LaunchIcon from '@mui/icons-material/Launch';
 import AddIcon from '@mui/icons-material/Add';
 import UserAvatar from '../../../components/AvatarCard/customAvatar'
 import Avatar from '@mui/material/Avatar';
 import { styled } from '@mui/material/styles';
-import { grey, lightGreen } from '@mui/material/colors';
+import { grey } from '@mui/material/colors';
 
 const GreyColorButton = styled(Button)(({ theme }) => ({
   color: theme.palette.getContrastText(grey[500]),
@@ -22,7 +19,7 @@ const GreyColorButton = styled(Button)(({ theme }) => ({
 }));
 
 const GreenColorButton = styled(Button)(({ theme }) => ({
-  color: theme.palette.getContrastText('#00b312'),
+  //color: theme.palette.getContrastText('#00b312'),
   backgroundColor: '#00b312',
   color: '#ffffff',
   '&:hover': {
@@ -75,7 +72,7 @@ export default function UserInfor() {
               alignItems: 'center'
           }}>
             <Avatar alt="twitter" sx={{ width: 28, height: 28 }} src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png" />
-            <Avatar alt="email" sx={{ width: 28, height: 28 }} src="https://www.kindpng.com/picc/m/27-279056_black-gmail-logo-png-transparent-png.png" />
+            <Avatar alt="email" sx={{ width: 28, height: 28 }} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZyZmyxwgq4BVxO0vn3wAmk8SJbiOzE2EMuUXaMhAwNEaZ9sUxIcBK0Zp7t2OCavujBow&usqp=CAU" />
             <Avatar alt="facebook" sx={{ width: 28, height: 28 }} src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png" />
           </Stack>
 
