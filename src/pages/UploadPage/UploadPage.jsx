@@ -5,6 +5,7 @@ import AddIcon from '@mui/icons-material/Add';
 import CloseIcon from '@mui/icons-material/Close';
 import DeleteIcon from '@mui/icons-material/Delete';
 import FileUploadIcon from '@mui/icons-material/FileUpload';
+import Footer from '../../components/Footer/Footer';
 import { useHistory } from 'react-router-dom';
 
 export default function UploadPage() {
@@ -89,6 +90,7 @@ export default function UploadPage() {
           accept="image/x-png,image/gif,image/jpeg"
         />
       </div>
+      <Footer />
     </div>
   );
 }

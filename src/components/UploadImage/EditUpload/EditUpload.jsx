@@ -1,6 +1,7 @@
 import { Grid, Typography } from '@mui/material';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import React, { useEffect } from 'react';
+import Footer from '../../../components/Footer/Footer';
 import classes from './EditUpload.module.css';
 const EditUpload = () => {
   const [images, setImages] = React.useState([]);
@@ -107,6 +108,8 @@ const EditUpload = () => {
         </Grid>
       </Grid>
       <p>akuefbyiawuyfiuervgiuy</p>
+
+      <Footer />
     </Grid>
   );
 };
