@@ -33,6 +33,7 @@ function SearchPage() {
   const [filters, setFilter] = React.useState(initialFilter);
   const [hidenFilter, setHidenFilter] = React.useState(false);
   const [isLoading, setIsLoading] = React.useState(false);
+  const [not, setNot] = React.useState(false);
 
   const search = useLocation().search;
   const query = new URLSearchParams(search).get('query');
@@ -44,6 +45,7 @@ function SearchPage() {
       params: { query: query, page: 1, per_page: 30 },
     });
     setIsLoading(false);
+    setNot(true);
     setImages(response.data.results);
   }, [query]);
   React.useEffect(() => {
@@ -89,8 +91,10 @@ function SearchPage() {
           <span className="sort">Sort:</span>
           <span className="related">Related tags:</span>
         </div>
-        {images.length === 0 && (
+        {images.length === 0 && not ? (
           <p className="notification">Can't find photo by search keyword</p>
+        ) : (
+          <></>
         )}
 
         <ImageList
