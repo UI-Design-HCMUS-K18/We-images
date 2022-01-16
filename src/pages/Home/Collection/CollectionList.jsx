@@ -26,14 +26,16 @@ export default function ArtistList() {
   };
 
   let resetTimeout;
+  let lastItemsPerPage;
   function onNextEnd(nextItemObject, currentPage) {
     let itemsPerPage = nextItemObject.index / currentPage;
     clearTimeout(resetTimeout);
-    if ((nextItemObject.index + itemsPerPage) >= data.length) {
+    if ((nextItemObject.index + itemsPerPage) >= data.length || (nextItemObject.index + lastItemsPerPage) >= data.length) {
       resetTimeout = setTimeout(() => {
         carouselRef.current.goTo(0)
       }, 4000)
     }
+    lastItemsPerPage = itemsPerPage;
   }
 
 
@@ -48,7 +50,7 @@ export default function ArtistList() {
       enableAutoPlay={true}
       autoPlaySpeed={4000}
       disableArrowsOnEnd={false}>
-      {data.map((item,index) => {
+      {data.map((item, index) => {
         return (<CollectionLayout key={index} collection={item}></CollectionLayout>);
       })}
     </Carousel>
