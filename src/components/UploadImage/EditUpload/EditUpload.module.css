@@ -74,3 +74,94 @@
   height: 500px;
   object-fit: cover;
 }
+
+.formContainer {
+  margin: 89px 238px;
+}
+
+.guildlines {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 150%;
+  text-align: center;
+}
+
+.informationBox {
+  padding: 86px 164px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 2px 2px rgba(58, 58, 68, 0.24), 0px 2px 4px rgba(90, 91, 106, 0.24);
+  border-radius: 8px;
+}
+
+.informationBox .formControl {
+  display: block;
+  width: 100%;
+}
+
+.informationBox .formGroup {
+  margin-bottom: 48px;
+}
+.informationBox .formLabel {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 150%;
+  margin-bottom: 7px;
+}
+
+.informationBox .formInput {
+    background: #FFFFFF;
+  border: 1px solid #808080;
+  box-sizing: border-box;
+  /* Shadow Dark / 2dp */
+
+  box-shadow: 0px 1px 2px rgba(58, 58, 68, 0.24), 0px 2px 4px rgba(90, 91, 106, 0.24);
+  border-radius: 20px;
+  height: 51px;
+  font-size: 24px;
+  padding: 16px;
+}
+.informationBox .formTextArea {
+    background: #FFFFFF;
+  border: 1px solid #808080;
+  box-sizing: border-box;
+  /* Shadow Dark / 2dp */
+
+  box-shadow: 0px 1px 2px rgba(58, 58, 68, 0.24), 0px 2px 4px rgba(90, 91, 106, 0.24);
+  border-radius: 20px;
+  height: 156px;
+  font-size: 24px;
+  padding: 16px;
+}
+
+.dFlex {
+  display: flex;
+}
+
+.informationBox .tagItem {
+  color: #2264D1;
+  margin-right: 24px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 150%;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.informationBox .checkboxLabel {
+  font-size: 28px;
+  font-weight: 300;
+  margin-right: 68px;
+}
+
+.informationBox .radioLabel {
+  font-size: 28px;
+  font-weight: 400;
+  margin-right: 50px;
+}
+
+.informationBox .authorLink {
+  font-size: 28px;
+  font-weight: 400;
+  margin-right: 20px !important;
+}
+

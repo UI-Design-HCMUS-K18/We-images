@@ -1,7 +1,16 @@
 import { Grid, Typography } from '@mui/material';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+import SaveIcon from '@mui/icons-material/Save';
 import React, { useEffect } from 'react';
+import AddIcon from '@mui/icons-material/Add';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import Button from '@mui/material/Button';
+
 import Footer from '../../../components/Footer/Footer';
+
 import classes from './EditUpload.module.css';
 const EditUpload = () => {
   const [images, setImages] = React.useState([]);
@@ -107,8 +116,222 @@ const EditUpload = () => {
           </Grid>
         </Grid>
       </Grid>
-      <p>akuefbyiawuyfiuervgiuy</p>
+      <div class={classes.formContainer}>
+        <form>
+          <div className={classes.informationBox}>
+            <div className={classes.formGroup}>
+              <label className={classes.formLabel}>Title</label>
+              <input
+                type="text"
+                className={`${classes.formInput} ${classes.formControl}`}
+              />
+            </div>
+            <div className={classes.formGroup}>
+              <label className={classes.formLabel}>
+                Description{' '}
+                <span
+                  style={{
+                    color: '#808080',
+                    fontSize: '24px',
+                    lineHeight: '150%',
+                  }}
+                >
+                  (Optional)
+                </span>
+              </label>
+              <textarea
+                className={`${classes.formTextArea} ${classes.formControl}`}
+              ></textarea>
+            </div>
+            <div className={`${classes.formGroup} ${classes.dFlex}`}>
+              <div style={{ flex: 1 }}>
+                <label className={classes.formLabel}>Tags</label>
+                <div
+                  style={{
+                    display: 'flex',
+                    marginRight: '150px',
+                  }}
+                >
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <input
+                      type="text"
+                      className={`${classes.formInput} ${classes.formControl}`}
+                    />
+                    <AddIcon
+                      style={{
+                        marginTop: '23px',
+                        width: '36px',
+                        height: '36px',
+                        color: '#808080',
+                      }}
+                    />
+                  </div>
 
+                  <SaveIcon
+                    style={{
+                      color: '#808080',
+                      width: '36px',
+                      height: '36px',
+                      marginLeft: '21px',
+                      marginTop: '10px',
+                    }}
+                  />
+                </div>
+              </div>
+              <div style={{ flex: 1 }}>
+                <label className={classes.formLabel}>Recommended Tags</label>
+                <ul
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    flexWrap: 'wrap',
+                    alignItems: 'flex-start',
+                  }}
+                >
+                  <li className={classes.tagItem}>#Animal</li>
+                  <li className={classes.tagItem}>#Cake</li>
+                  <li className={classes.tagItem}>#Drink</li>
+                  <li className={classes.tagItem}>#BlackHat</li>
+                  <li className={classes.tagItem}>#Dragon</li>
+
+                  <li className={classes.tagItem}>#Countryside</li>
+                  <li className={classes.tagItem}>#RickRoll</li>
+                  <li className={classes.tagItem}>#Rose</li>
+                  <li className={classes.tagItem}>#Books</li>
+
+                  <li className={classes.tagItem}>#DogAndCat</li>
+                  <li className={classes.tagItem}>#Letter</li>
+                  <li className={classes.tagItem}>#Obama</li>
+                  <li className={classes.tagItem}>#Bananas</li>
+                </ul>
+              </div>
+            </div>
+            <div className={classes.formGroup}>
+              <label
+                className={classes.formLabel}
+                style={{ marginRight: '68px' }}
+              >
+                Open to
+              </label>
+              <FormControl component="fieldset">
+                <RadioGroup
+                  row
+                  aria-label="gender"
+                  name="row-radio-buttons-group"
+                >
+                  <FormControlLabel
+                    classes={{
+                      label: classes.checkboxLabel,
+                    }}
+                    value="Publish"
+                    control={<Radio />}
+                    label="Publish"
+                  />
+                  <FormControlLabel
+                    classes={{
+                      label: classes.checkboxLabel,
+                    }}
+                    value="Followers Only"
+                    control={<Radio />}
+                    label="Followers Only"
+                  />
+                  <FormControlLabel
+                    classes={{
+                      label: classes.checkboxLabel,
+                    }}
+                    value="Private"
+                    control={<Radio />}
+                    label="Private"
+                  />
+                </RadioGroup>
+              </FormControl>
+            </div>
+            <div className={classes.formGroup}>
+              <RadioGroup
+                row
+                aria-label="gender"
+                name="row-radio-buttons-group"
+              >
+                <FormControlLabel
+                  classes={{
+                    label: classes.radioLabel,
+                  }}
+                  value="Original work"
+                  control={<Radio />}
+                  label="Original work"
+                />
+                <span
+                  style={{
+                    display: 'block',
+                    fontSize: '28px',
+                    marginRight: '50px',
+                    marginTop: '7px',
+                  }}
+                >
+                  or
+                </span>
+                <div style={{ display: 'flex' }}>
+                  <FormControlLabel
+                    classes={{
+                      label: classes.authorLink,
+                    }}
+                    value="Author link"
+                    control={<Radio />}
+                    label="Author link"
+                  />
+                  <div>
+                    <input
+                      type="text"
+                      className={`${classes.formInput} ${classes.formControl}`}
+                    />
+                  </div>
+                </div>
+              </RadioGroup>
+            </div>
+          </div>
+          <div
+            className="formFooter"
+            style={{
+              display: 'flex',
+              justifyContent: 'space-around',
+              alignItems: 'center',
+              marginTop: '64px',
+            }}
+          >
+            <div style={{ width: '600px' }}>
+              <p className={classes.guildlines}>
+                Please read our{' '}
+                <span style={{ color: '#2264D1' }}>Terms of use</span> and{' '}
+                <span style={{ color: '#2264D1' }}>Guildlines</span> before
+                posting your images
+              </p>
+            </div>
+            <div className="actions">
+              <Button
+                variant="outlined"
+                color="error"
+                size="large"
+                style={{ marginRight: '40px' }}
+              >
+                Cancel Upload
+              </Button>
+              <Button
+                variant="contained"
+                size="large"
+                style={{ width: '172px' }}
+              >
+                Post
+              </Button>
+            </div>
+          </div>
+        </form>
+      </div>
       <Footer />
     </Grid>
   );
