@@ -212,14 +212,14 @@ export default function ImageDetail() {
             <div className="info name">
               <ImageIcon />
               {capitalize(
-                image?.alt_description ? image.alt_description : 'Untitle'
+                image?.alt_description ? image.alt_description : 'Untitled'
               )}
             </div>
             <div className="info">
               <LocationOnIcon />
               {isLocationValid(image?.location?.name)
                 ? image.location.name
-                : 'Unavailable'}
+                : 'Unknown Location'}
             </div>
             <div className="info">
               <EventIcon />
