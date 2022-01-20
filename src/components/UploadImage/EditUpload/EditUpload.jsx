@@ -8,6 +8,7 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import Button from '@mui/material/Button';
+import Link from 'react-router-dom/Link';
 
 import Footer from '../../../components/Footer/Footer';
 
@@ -21,6 +22,11 @@ const EditUpload = () => {
 
     //localStorage.setItem('images', []);
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <Grid>
       <Grid container style={{ marginTop: 100, justifyContent: 'center' }}>
@@ -313,21 +319,26 @@ const EditUpload = () => {
               </p>
             </div>
             <div className="actions">
-              <Button
-                variant="outlined"
-                color="error"
-                size="large"
-                style={{ marginRight: '40px' }}
-              >
-                Cancel Upload
-              </Button>
-              <Button
-                variant="contained"
-                size="large"
-                style={{ width: '172px' }}
-              >
-                Post
-              </Button>
+              <Link to="/" style={{ textDecoration: 'none' }}>
+                <Button
+                  variant="outlined"
+                  color="error"
+                  size="large"
+                  style={{ marginRight: '40px'}}
+                >
+                  Cancel Upload
+                </Button>
+              </Link>
+              
+              <Link to='/userprofile' style={{ textDecoration: 'none'}}>
+                <Button 
+                  variant="contained"
+                  size="large"
+                  style={{ width: '172px' }}
+                >
+                  Post
+                </Button>
+              </Link>
             </div>
           </div>
         </form>
