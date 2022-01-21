@@ -324,9 +324,9 @@ const EditUpload = () => {
                   variant="outlined"
                   color="error"
                   size="large"
-                  style={{ marginRight: '40px'}}
+                  style={{ marginRight: '40px', height: '56px', fontSize: '18px' }}
                 >
-                  Cancel Upload
+                  Cancel Uploads
                 </Button>
               </Link>
               
@@ -334,7 +334,7 @@ const EditUpload = () => {
                 <Button 
                   variant="contained"
                   size="large"
-                  style={{ width: '172px' }}
+                  style={{ width: '172px', height: '56px', fontSize: '18px'}}
                 >
                   Post
                 </Button>
