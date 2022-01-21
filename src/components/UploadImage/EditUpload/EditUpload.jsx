@@ -113,7 +113,7 @@ const EditUpload = () => {
           <Grid className={classes.thumbnail}>
             <div className={classes.content}>
               <div className={classes.image}>
-              <img src={images[0].src??"./images/unsplash_z8pAEjUUxbY.png"} alt="olala" />
+              <img src={"./images/unsplash_z8pAEjUUxbY.png"} alt="olala" />
               </div>
               <div className={classes.container}>
                 <div className={classes.title}>Thumbnail</div>
