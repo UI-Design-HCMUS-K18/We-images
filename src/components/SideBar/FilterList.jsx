@@ -2,7 +2,7 @@ import React from 'react';
 import Collapse from '@mui/material/Collapse';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-
+import classes from './Filter.module.css'
 import {
   Box,
   FormControl,
@@ -26,7 +26,7 @@ const FilterListComponet = ({
   return (
     <Box sx={{ display: 'flex' }}>
       <FormControl sx={{ m: 1, marginBottom:0 }} component="fieldset" variant="standard">
-        <FormLabel component="legend" onClick={handleClick}>
+        <FormLabel component="legend" className={classes['filter-label']} onClick={handleClick}>
           {name}
           {open ? <ExpandLess sx={{ position: 'absolute' }}/> : <ExpandMore sx={{ position: 'absolute' }}/>} 
         </FormLabel>

@@ -8,7 +8,7 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import Button from '@mui/material/Button';
-import Link from 'react-router-dom/Link';
+import {Link} from 'react-router-dom';
 
 import Footer from '../../../components/Footer/Footer';
 
@@ -18,6 +18,7 @@ const EditUpload = () => {
 
   useEffect(() => {
     const newImages = JSON.parse(localStorage.getItem('images'));
+    console.log(newImages[0]);
     setImages(newImages);
 
     //localStorage.setItem('images', []);
@@ -98,7 +99,7 @@ const EditUpload = () => {
               paddingTop: '20px',
             }}
           >
-            {images.map((image, index) => (
+            {images?images.map((image, index) => (
               <Grid item xs={3}>
                 <img
                   className={classes.img}
@@ -107,12 +108,12 @@ const EditUpload = () => {
                   alt="abc"
                 />
               </Grid>
-            ))}
+            )):''}
           </Grid>
           <Grid className={classes.thumbnail}>
             <div className={classes.content}>
               <div className={classes.image}>
-                <img src="./images/unsplash_z8pAEjUUxbY.png" alt="olala" />
+              <img src={images[0].src??"./images/unsplash_z8pAEjUUxbY.png"} alt="olala" />
               </div>
               <div className={classes.container}>
                 <div className={classes.title}>Thumbnail</div>
